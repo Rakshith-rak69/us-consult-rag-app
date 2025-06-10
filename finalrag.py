@@ -234,7 +234,8 @@ def get_and_concat(query, n_results=1):
 
 def fusion_search(query, n_results=1):
   subquestion_context = get_and_concat(query, n_results=n_results)
-  print("Subquestion context:", subquestion_context)
+  st.subheader("Subquestion Context:")
+  st.markdown(subquestion_context)
   final_prompt = f"""<INSTRUCTIONS>
     **You are an expert at synthesizing information.**
     **Given the answers to several subquestions provided in <SUBQUESTION_INFO> and the <ORIGINAL_QUERY>,**
