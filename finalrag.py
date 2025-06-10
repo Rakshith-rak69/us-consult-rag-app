@@ -228,7 +228,7 @@ def get_and_concat(query, n_results=1):
     result_str = populate_rag_query(subquestion, n_results=n_results)
     rag_prompt = make_rag_prompt(subquestion, result_str)
     answer = completion_chat(rag_prompt, system_prompt)
-    subquestion_context.append(f"Q: {subquestion}\nA: {answer}")
+    subquestion_context.append(f"Q: {subquestion}\n\nA: {answer}")
   return "\n\n".join(subquestion_context)
 
 
