@@ -267,6 +267,10 @@ def perform_default_rag(query, n_results=2):
 
 st.title("⚖️ US Law Consult RAG System")
 st.markdown("Your AI-powered legal research assistant.")
+st.markdown("### 🧠 Try asking questions like:")
+st.markdown("1. **What are Improvements of Disaster Response and Loans?**")
+st.markdown("2. **According to the National Defense Authorization Act for Fiscal Year 2012, what is its short title, what are the five main divisions into which it is organized, and what is its stated primary purpose?**")
+st.markdown("3. **Explain the National Highway Program and its importance in U.S. infrastructure development.**")
 
 user_question = st.text_area("Ask a question", key="user_question")
 
