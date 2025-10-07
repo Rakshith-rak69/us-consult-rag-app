@@ -1,0 +1,9 @@
+# Secrets
+secrets.toml
+.env
+
+# Python
+__pycache__/
+*.pyc
+
+
