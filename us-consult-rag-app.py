@@ -38,9 +38,20 @@ text_splitter = RecursiveCharacterTextSplitter(
 )
 
 # OpenAI / OpenRouter client (update your API key here)
+import streamlit as st
+from openai import OpenAI
+import toml
+
+# Use Streamlit secret if available, else fallback to local secrets.toml
+if "OPENROUTER_API_KEY" in st.secrets:
+    api_key = st.secrets["OPENROUTER_API_KEY"]
+else:
+    secrets = toml.load("secrets.toml")
+    api_key = secrets["openrouter"]["api_key"]
+
 client = OpenAI(
     base_url="https://openrouter.ai/api/v1",
-    api_key=st.secrets["OPENROUTER_API_KEY"],
+    api_key=api_key,
 )
 
 if "OPENROUTER_API_KEY" in st.secrets:
