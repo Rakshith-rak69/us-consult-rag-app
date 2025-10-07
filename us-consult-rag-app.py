@@ -13,7 +13,7 @@ from openai import OpenAI
 
 # === Paths & Setup ===
 
-CHROMA_DB_PATH = "./my_chroma_db_folder"
+CHROMA_DB_PATH = "./us_law_chroma_db/us_law_chroma_db"
 os.makedirs(CHROMA_DB_PATH, exist_ok=True)
 
 # Connect to ChromaDB persistent client
